@@ -79,6 +79,7 @@
             this.txtLoginPwd.Size = new System.Drawing.Size(202, 26);
             this.txtLoginPwd.TabIndex = 15;
             this.txtLoginPwd.Text = "222222";
+            this.txtLoginPwd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLoginPwd_KeyDown);
             // 
             // txtLoginId
             // 
@@ -89,6 +90,7 @@
             this.txtLoginId.Size = new System.Drawing.Size(202, 26);
             this.txtLoginId.TabIndex = 12;
             this.txtLoginId.Text = "1000";
+            this.txtLoginId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLoginId_KeyDown);
             // 
             // label2
             // 

@@ -70,6 +70,24 @@ namespace SMDB
 
         }
 
+        private void txtLoginId_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (this.txtLoginId.Text.Trim().Length == 0) return;
+            if(e.KeyValue == 13)
+            {
+                this.txtLoginPwd.Focus();
+            }
+        
 
+        }
+
+        private void txtLoginPwd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (this.txtLoginPwd.Text.Trim().Length == 0) return;
+            if (e.KeyValue == 13)
+            {
+                btnLogin_Click(null, null);
+            }
+        }
     }
 }

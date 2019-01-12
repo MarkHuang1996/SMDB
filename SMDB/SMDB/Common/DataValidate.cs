@@ -12,10 +12,10 @@ namespace SMDB
     /// <summary>
     /// 通用验证类
     /// </summary>
-    class DataValidate
+   public class DataValidate
     {
         /// <summary>
-        /// 验证正整数
+        /// Isinteger
         /// </summary>
         /// <param name="txt"></param>
         /// <returns></returns>
@@ -25,7 +25,7 @@ namespace SMDB
             return objReg.IsMatch(txt);
         }
         /// <summary>
-        /// 验证是否是Email
+        /// IsEmail
         /// </summary>
         /// <param name="txt"></param>
         /// <returns></returns>
@@ -35,13 +35,13 @@ namespace SMDB
             return objReg.IsMatch(txt);
         }
         /// <summary>
-        /// 验证身份证
+        /// 
         /// </summary>
         /// <param name="txt"></param>
         /// <returns></returns>
-        public static bool IsIdentityCard(string txt)
+        public static bool IsIdentityStudentID(string txt)
         {
-            Regex objReg = new Regex(@"^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$");
+            Regex objReg = new Regex(@"^\d{10}$");
             return objReg.IsMatch(txt);
         }
     }
