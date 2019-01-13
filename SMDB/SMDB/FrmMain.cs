@@ -51,5 +51,12 @@ namespace SMDB
             this.OpenForm(objFrmAddNewStudent);
 
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.CloseForm();
+            FrmStudentManage objFrmStudentManage = new FrmStudentManage();
+            this.OpenForm(objFrmStudentManage);
+        }
     }
 }

@@ -89,5 +89,10 @@ namespace SMDB
                 btnLogin_Click(null, null);
             }
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

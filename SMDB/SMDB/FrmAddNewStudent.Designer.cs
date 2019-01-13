@@ -50,12 +50,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtStudentId = new System.Windows.Forms.TextBox();
+            this.lblStudentId = new System.Windows.Forms.Label();
             this.txtLName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtFName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblStudentId = new System.Windows.Forms.Label();
-            this.txtStudentId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbVideo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStu)).BeginInit();
             this.gbStudentInfo.SuspendLayout();
@@ -192,9 +192,9 @@
             this.gbStudentInfo.Controls.Add(this.txtFName);
             this.gbStudentInfo.Controls.Add(this.label1);
             this.gbStudentInfo.Location = new System.Drawing.Point(36, 341);
-            this.gbStudentInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbStudentInfo.Margin = new System.Windows.Forms.Padding(2);
             this.gbStudentInfo.Name = "gbStudentInfo";
-            this.gbStudentInfo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbStudentInfo.Padding = new System.Windows.Forms.Padding(2);
             this.gbStudentInfo.Size = new System.Drawing.Size(681, 186);
             this.gbStudentInfo.TabIndex = 57;
             this.gbStudentInfo.TabStop = false;
@@ -204,7 +204,7 @@
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(112, 89);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
             this.dateTimePicker1.TabIndex = 49;
@@ -302,6 +302,23 @@
             this.label2.TabIndex = 53;
             this.label2.Text = "Gender：";
             // 
+            // txtStudentId
+            // 
+            this.txtStudentId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStudentId.Location = new System.Drawing.Point(536, 93);
+            this.txtStudentId.Name = "txtStudentId";
+            this.txtStudentId.Size = new System.Drawing.Size(100, 20);
+            this.txtStudentId.TabIndex = 46;
+            // 
+            // lblStudentId
+            // 
+            this.lblStudentId.AutoSize = true;
+            this.lblStudentId.Location = new System.Drawing.Point(465, 97);
+            this.lblStudentId.Name = "lblStudentId";
+            this.lblStudentId.Size = new System.Drawing.Size(79, 13);
+            this.lblStudentId.TabIndex = 57;
+            this.lblStudentId.Text = "StudentIdNo：";
+            // 
             // txtLName
             // 
             this.txtLName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -336,23 +353,6 @@
             this.label1.TabIndex = 58;
             this.label1.Text = "First Name：";
             // 
-            // lblStudentId
-            // 
-            this.lblStudentId.AutoSize = true;
-            this.lblStudentId.Location = new System.Drawing.Point(465, 97);
-            this.lblStudentId.Name = "lblStudentId";
-            this.lblStudentId.Size = new System.Drawing.Size(79, 13);
-            this.lblStudentId.TabIndex = 57;
-            this.lblStudentId.Text = "StudentIdNo：";
-            // 
-            // txtStudentId
-            // 
-            this.txtStudentId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStudentId.Location = new System.Drawing.Point(536, 93);
-            this.txtStudentId.Name = "txtStudentId";
-            this.txtStudentId.Size = new System.Drawing.Size(100, 20);
-            this.txtStudentId.TabIndex = 46;
-            // 
             // FrmAddNewStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,9 +369,10 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAdd);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmAddNewStudent";
             this.Text = "FrmAddNewStudent";
+            this.Load += new System.EventHandler(this.FrmAddNewStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbVideo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStu)).EndInit();
             this.gbStudentInfo.ResumeLayout(false);

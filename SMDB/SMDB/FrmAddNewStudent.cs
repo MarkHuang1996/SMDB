@@ -125,7 +125,7 @@ namespace SMDB
                 StudentIdNo = Convert.ToInt32(this.txtStudentId.Text.Trim()),
                 PhoneNumber = this.txtPhoneNumber.Text.Trim(),
                 Address = this.txtAddress.Text.Trim(),
-                StuImage = this.pbStu.Image == null ? "" : new Common.SerializeObjectToString().SerializeObject(this.pbStu.Image)
+                StuImage = this.pbStu.Image == null ? "" : new SerializeObjectToString().SerializeObject(this.pbStu.Image)
             };
             try
             {
@@ -162,6 +162,11 @@ namespace SMDB
 
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void FrmAddNewStudent_Load(object sender, EventArgs e)
+        {
 
         }
     }

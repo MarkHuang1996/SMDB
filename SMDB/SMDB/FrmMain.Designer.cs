@@ -65,13 +65,13 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(93, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(188, 32);
             this.toolStripStatusLabel1.Text = " [Current User：";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(80, 17);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(164, 32);
             this.toolStripStatusLabel2.Text = "Version：V1.0";
             // 
             // statusStrip1
@@ -81,16 +81,16 @@
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel1,
             this.lblCurrentUser});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 772);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 757);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1063, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1063, 37);
             this.statusStrip1.TabIndex = 13;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // lblCurrentUser
             // 
             this.lblCurrentUser.Name = "lblCurrentUser";
-            this.lblCurrentUser.Size = new System.Drawing.Size(26, 17);
+            this.lblCurrentUser.Size = new System.Drawing.Size(52, 32);
             this.lblCurrentUser.Text = "***]";
             // 
             // tsbExit
@@ -98,7 +98,7 @@
             this.tsbExit.Image = ((System.Drawing.Image)(resources.GetObject("tsbExit.Image")));
             this.tsbExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbExit.Name = "tsbExit";
-            this.tsbExit.Size = new System.Drawing.Size(53, 28);
+            this.tsbExit.Size = new System.Drawing.Size(80, 36);
             this.tsbExit.Text = "Exit";
             // 
             // toolStripSeparator6
@@ -111,20 +111,20 @@
             this.tsbModifyPwd.Image = ((System.Drawing.Image)(resources.GetObject("tsbModifyPwd.Image")));
             this.tsbModifyPwd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModifyPwd.Name = "tsbModifyPwd";
-            this.tsbModifyPwd.Size = new System.Drawing.Size(102, 28);
+            this.tsbModifyPwd.Size = new System.Drawing.Size(176, 36);
             this.tsbModifyPwd.Text = "Pwd Change";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 39);
             // 
             // tsbQuery
             // 
             this.tsbQuery.Image = ((System.Drawing.Image)(resources.GetObject("tsbQuery.Image")));
             this.tsbQuery.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbQuery.Name = "tsbQuery";
-            this.tsbQuery.Size = new System.Drawing.Size(104, 28);
+            this.tsbQuery.Size = new System.Drawing.Size(182, 36);
             this.tsbQuery.Text = "Quick Search";
             // 
             // tsbScoreAnalysis
@@ -132,28 +132,29 @@
             this.tsbScoreAnalysis.Image = ((System.Drawing.Image)(resources.GetObject("tsbScoreAnalysis.Image")));
             this.tsbScoreAnalysis.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbScoreAnalysis.Name = "tsbScoreAnalysis";
-            this.tsbScoreAnalysis.Size = new System.Drawing.Size(136, 28);
+            this.tsbScoreAnalysis.Size = new System.Drawing.Size(247, 36);
             this.tsbScoreAnalysis.Text = "Query and Analysis";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 39);
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(105, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(185, 36);
             this.toolStripButton1.Text = "Students Info";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // tsbAddStudent
             // 
             this.tsbAddStudent.Image = ((System.Drawing.Image)(resources.GetObject("tsbAddStudent.Image")));
             this.tsbAddStudent.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAddStudent.Name = "tsbAddStudent";
-            this.tsbAddStudent.Size = new System.Drawing.Size(128, 28);
+            this.tsbAddStudent.Size = new System.Drawing.Size(231, 36);
             this.tsbAddStudent.Text = "Add New Student";
             this.tsbAddStudent.Click += new System.EventHandler(this.tsbAddStudent_Click);
             // 
@@ -171,16 +172,16 @@
             this.tsbModifyPwd,
             this.toolStripSeparator6,
             this.tsbExit});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 38);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1063, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1063, 39);
             this.toolStrip1.TabIndex = 12;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // attenceCheckToolStripMenuItem
             // 
             this.attenceCheckToolStripMenuItem.Name = "attenceCheckToolStripMenuItem";
-            this.attenceCheckToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.attenceCheckToolStripMenuItem.Size = new System.Drawing.Size(308, 38);
             this.attenceCheckToolStripMenuItem.Text = "Attendance Check";
             // 
             // attendanceToolStripMenuItem
@@ -188,19 +189,19 @@
             this.attendanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.attenceCheckToolStripMenuItem});
             this.attendanceToolStripMenuItem.Name = "attendanceToolStripMenuItem";
-            this.attendanceToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.attendanceToolStripMenuItem.Size = new System.Drawing.Size(178, 36);
             this.attendanceToolStripMenuItem.Text = "Attendance(&A)";
             // 
             // quickSearchToolStripMenuItem
             // 
             this.quickSearchToolStripMenuItem.Name = "quickSearchToolStripMenuItem";
-            this.quickSearchToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.quickSearchToolStripMenuItem.Size = new System.Drawing.Size(350, 38);
             this.quickSearchToolStripMenuItem.Text = "Quick Search";
             // 
             // queryAndAnalysisQToolStripMenuItem
             // 
             this.queryAndAnalysisQToolStripMenuItem.Name = "queryAndAnalysisQToolStripMenuItem";
-            this.queryAndAnalysisQToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.queryAndAnalysisQToolStripMenuItem.Size = new System.Drawing.Size(350, 38);
             this.queryAndAnalysisQToolStripMenuItem.Text = "Query and Analysis(&Q)";
             // 
             // scoureYToolStripMenuItem
@@ -209,19 +210,19 @@
             this.queryAndAnalysisQToolStripMenuItem,
             this.quickSearchToolStripMenuItem});
             this.scoureYToolStripMenuItem.Name = "scoureYToolStripMenuItem";
-            this.scoureYToolStripMenuItem.Size = new System.Drawing.Size(70, 22);
+            this.scoureYToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
             this.scoureYToolStripMenuItem.Text = "Scoure(&Y)";
             // 
             // studentsInfoIToolStripMenuItem
             // 
             this.studentsInfoIToolStripMenuItem.Name = "studentsInfoIToolStripMenuItem";
-            this.studentsInfoIToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.studentsInfoIToolStripMenuItem.Size = new System.Drawing.Size(331, 38);
             this.studentsInfoIToolStripMenuItem.Text = "Students Info(&I)";
             // 
             // addNewStudentAToolStripMenuItem
             // 
             this.addNewStudentAToolStripMenuItem.Name = "addNewStudentAToolStripMenuItem";
-            this.addNewStudentAToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.addNewStudentAToolStripMenuItem.Size = new System.Drawing.Size(331, 38);
             this.addNewStudentAToolStripMenuItem.Text = "Add New Student(&A)";
             // 
             // studentManagerTToolStripMenuItem
@@ -230,24 +231,24 @@
             this.addNewStudentAToolStripMenuItem,
             this.studentsInfoIToolStripMenuItem});
             this.studentManagerTToolStripMenuItem.Name = "studentManagerTToolStripMenuItem";
-            this.studentManagerTToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.studentManagerTToolStripMenuItem.Size = new System.Drawing.Size(232, 36);
             this.studentManagerTToolStripMenuItem.Text = "StudentManager(&T)";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(274, 38);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(153, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(271, 6);
             // 
             // pwdChangePToolStripMenuItem
             // 
             this.pwdChangePToolStripMenuItem.Name = "pwdChangePToolStripMenuItem";
-            this.pwdChangePToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.pwdChangePToolStripMenuItem.Size = new System.Drawing.Size(274, 38);
             this.pwdChangePToolStripMenuItem.Text = "Pwd Change(&P)";
             // 
             // systemsToolStripMenuItem
@@ -257,7 +258,7 @@
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.systemsToolStripMenuItem.Name = "systemsToolStripMenuItem";
-            this.systemsToolStripMenuItem.Size = new System.Drawing.Size(71, 22);
+            this.systemsToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
             this.systemsToolStripMenuItem.Text = "System(&S)";
             // 
             // menuStrip1
@@ -271,7 +272,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1063, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1063, 38);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 

@@ -53,14 +53,13 @@
             this.tsmidDeleteStu = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiModifyStu = new System.Windows.Forms.ToolStripMenuItem();
-            this.ClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentIdNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvStudentList = new System.Windows.Forms.DataGridView();
+            this.StudentIdNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -72,11 +71,11 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label9.ForeColor = System.Drawing.Color.Purple;
-            this.label9.Location = new System.Drawing.Point(43, 42);
+            this.label9.Location = new System.Drawing.Point(8, 5);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(315, 62);
+            this.label9.Size = new System.Drawing.Size(250, 31);
             this.label9.TabIndex = 9;
-            this.label9.Text = "学员信息管理";
+            this.label9.Text = "StudentInfo Manage";
             // 
             // groupBox2
             // 
@@ -89,9 +88,9 @@
             this.groupBox2.Controls.Add(this.btnNameDESC);
             this.groupBox2.Controls.Add(this.btnDel);
             this.groupBox2.Controls.Add(this.btnEidt);
-            this.groupBox2.Location = new System.Drawing.Point(123, 155);
+            this.groupBox2.Location = new System.Drawing.Point(14, 62);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1096, 161);
+            this.groupBox2.Size = new System.Drawing.Size(967, 77);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "[按照班级查询]";
@@ -104,18 +103,19 @@
             this.btnStuIdDESC.Name = "btnStuIdDESC";
             this.btnStuIdDESC.Size = new System.Drawing.Size(84, 38);
             this.btnStuIdDESC.TabIndex = 5;
-            this.btnStuIdDESC.Text = "学号降序";
+            this.btnStuIdDESC.Text = "StuNo DESC";
             this.btnStuIdDESC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStuIdDESC.UseVisualStyleBackColor = true;
+            this.btnStuIdDESC.Click += new System.EventHandler(this.btnStuIdDESC_Click);
             // 
             // cboClass
             // 
             this.cboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboClass.FormattingEnabled = true;
-            this.cboClass.Location = new System.Drawing.Point(84, 33);
+            this.cboClass.Location = new System.Drawing.Point(84, 32);
             this.cboClass.Name = "cboClass";
-            this.cboClass.Size = new System.Drawing.Size(117, 33);
+            this.cboClass.Size = new System.Drawing.Size(117, 21);
             this.cboClass.TabIndex = 1;
             // 
             // btnQuery
@@ -126,18 +126,19 @@
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(84, 38);
             this.btnQuery.TabIndex = 2;
-            this.btnQuery.Text = "提交查询";
+            this.btnQuery.Text = "Submit";
             this.btnQuery.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQuery.UseVisualStyleBackColor = true;
+            this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 25);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "学员班级：";
+            this.label1.Text = "Class：";
             // 
             // btnPrint
             // 
@@ -145,11 +146,12 @@
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrint.Location = new System.Drawing.Point(812, 24);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(220, 38);
+            this.btnPrint.Size = new System.Drawing.Size(136, 38);
             this.btnPrint.TabIndex = 6;
-            this.btnPrint.Text = "打印当前学员信息 ";
+            this.btnPrint.Text = "Print Current StuInfo";
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnExport
             // 
@@ -159,7 +161,7 @@
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(108, 38);
             this.btnExport.TabIndex = 6;
-            this.btnExport.Text = "导出到Excel ";
+            this.btnExport.Text = "Export to Excel";
             this.btnExport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExport.UseVisualStyleBackColor = true;
             // 
@@ -171,9 +173,10 @@
             this.btnNameDESC.Name = "btnNameDESC";
             this.btnNameDESC.Size = new System.Drawing.Size(84, 38);
             this.btnNameDESC.TabIndex = 5;
-            this.btnNameDESC.Text = "姓名降序";
+            this.btnNameDESC.Text = "FName DESC";
             this.btnNameDESC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNameDESC.UseVisualStyleBackColor = true;
+            this.btnNameDESC.Click += new System.EventHandler(this.btnNameDESC_Click);
             // 
             // btnDel
             // 
@@ -184,7 +187,7 @@
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(75, 38);
             this.btnDel.TabIndex = 2;
-            this.btnDel.Text = "删  除";
+            this.btnDel.Text = "Delete";
             this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDel.UseVisualStyleBackColor = true;
             // 
@@ -192,60 +195,63 @@
             // 
             this.btnEidt.Image = ((System.Drawing.Image)(resources.GetObject("btnEidt.Image")));
             this.btnEidt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEidt.Location = new System.Drawing.Point(519, 25);
+            this.btnEidt.Location = new System.Drawing.Point(519, 24);
             this.btnEidt.Name = "btnEidt";
             this.btnEidt.Size = new System.Drawing.Size(75, 38);
             this.btnEidt.TabIndex = 2;
-            this.btnEidt.Text = "修  改";
+            this.btnEidt.Text = "Modify";
             this.btnEidt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEidt.UseVisualStyleBackColor = true;
+            this.btnEidt.Click += new System.EventHandler(this.btnEidt_Click);
             // 
             // btnClose
             // 
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(1087, 387);
+            this.btnClose.Location = new System.Drawing.Point(886, 170);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(132, 72);
+            this.btnClose.Size = new System.Drawing.Size(75, 38);
             this.btnClose.TabIndex = 8;
-            this.btnClose.Text = "关闭窗口";
+            this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
             // 
             // txtStudentId
             // 
             this.txtStudentId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStudentId.Location = new System.Drawing.Point(100, 55);
+            this.txtStudentId.Location = new System.Drawing.Point(84, 27);
             this.txtStudentId.Name = "txtStudentId";
-            this.txtStudentId.Size = new System.Drawing.Size(117, 31);
+            this.txtStudentId.Size = new System.Drawing.Size(117, 20);
             this.txtStudentId.TabIndex = 1;
+            this.txtStudentId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtStudentId_KeyDown);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 59);
+            this.label2.Location = new System.Drawing.Point(11, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 25);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "输入学号：";
+            this.label2.Text = "StuNo：";
             // 
             // btnQueryById
             // 
-            this.btnQueryById.Location = new System.Drawing.Point(249, 43);
+            this.btnQueryById.Location = new System.Drawing.Point(218, 18);
             this.btnQueryById.Name = "btnQueryById";
-            this.btnQueryById.Size = new System.Drawing.Size(122, 71);
+            this.btnQueryById.Size = new System.Drawing.Size(84, 38);
             this.btnQueryById.TabIndex = 2;
-            this.btnQueryById.Text = "提交查询";
+            this.btnQueryById.Text = "Submit";
             this.btnQueryById.UseVisualStyleBackColor = true;
+            this.btnQueryById.Click += new System.EventHandler(this.btnQueryById_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtStudentId);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnQueryById);
-            this.groupBox1.Location = new System.Drawing.Point(141, 322);
+            this.groupBox1.Location = new System.Drawing.Point(14, 152);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(431, 120);
+            this.groupBox1.Size = new System.Drawing.Size(329, 66);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "按学号精确查询";
@@ -253,78 +259,23 @@
             // tsmidDeleteStu
             // 
             this.tsmidDeleteStu.Name = "tsmidDeleteStu";
-            this.tsmidDeleteStu.Size = new System.Drawing.Size(226, 36);
+            this.tsmidDeleteStu.Size = new System.Drawing.Size(145, 22);
             this.tsmidDeleteStu.Text = "删除学员(&D)";
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiModifyStu,
             this.tsmidDeleteStu});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(227, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(146, 48);
             // 
             // tsmiModifyStu
             // 
             this.tsmiModifyStu.Name = "tsmiModifyStu";
-            this.tsmiModifyStu.Size = new System.Drawing.Size(226, 36);
+            this.tsmiModifyStu.Size = new System.Drawing.Size(145, 22);
             this.tsmiModifyStu.Text = "修改学员(&M)";
-            // 
-            // ClassName
-            // 
-            this.ClassName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ClassName.DataPropertyName = "ClassName";
-            this.ClassName.HeaderText = "所在班级";
-            this.ClassName.Name = "ClassName";
-            this.ClassName.ReadOnly = true;
-            // 
-            // PhoneNumber
-            // 
-            this.PhoneNumber.DataPropertyName = "PhoneNumber";
-            this.PhoneNumber.HeaderText = "手机号码";
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.ReadOnly = true;
-            this.PhoneNumber.Width = 150;
-            // 
-            // Birthday
-            // 
-            this.Birthday.DataPropertyName = "Birthday";
-            this.Birthday.HeaderText = "出生日期";
-            this.Birthday.Name = "Birthday";
-            this.Birthday.ReadOnly = true;
-            this.Birthday.Width = 120;
-            // 
-            // StudentIdNo
-            // 
-            this.StudentIdNo.DataPropertyName = "StudentIdNo";
-            this.StudentIdNo.HeaderText = "身份证号";
-            this.StudentIdNo.Name = "StudentIdNo";
-            this.StudentIdNo.ReadOnly = true;
-            this.StudentIdNo.Width = 200;
-            // 
-            // Gender
-            // 
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.HeaderText = "性别";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            this.Gender.Width = 80;
-            // 
-            // StudentName
-            // 
-            this.StudentName.DataPropertyName = "StudentName";
-            this.StudentName.HeaderText = "姓名";
-            this.StudentName.Name = "StudentName";
-            this.StudentName.ReadOnly = true;
-            this.StudentName.Width = 120;
-            // 
-            // StudentId
-            // 
-            this.StudentId.DataPropertyName = "StudentId";
-            this.StudentId.Frozen = true;
-            this.StudentId.HeaderText = "学号";
-            this.StudentId.Name = "StudentId";
-            this.StudentId.ReadOnly = true;
             // 
             // dgvStudentList
             // 
@@ -341,12 +292,11 @@
             this.dgvStudentList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStudentList.ColumnHeadersHeight = 30;
             this.dgvStudentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.StudentId,
-            this.StudentName,
-            this.Gender,
             this.StudentIdNo,
+            this.FirstName,
+            this.LastName,
+            this.Gender,
             this.Birthday,
-            this.PhoneNumber,
             this.ClassName});
             this.dgvStudentList.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -357,7 +307,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Blue;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvStudentList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvStudentList.Location = new System.Drawing.Point(153, 480);
+            this.dgvStudentList.Location = new System.Drawing.Point(14, 239);
             this.dgvStudentList.Name = "dgvStudentList";
             this.dgvStudentList.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -372,19 +322,64 @@
             this.dgvStudentList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvStudentList.RowTemplate.Height = 23;
             this.dgvStudentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStudentList.Size = new System.Drawing.Size(1269, 607);
+            this.dgvStudentList.Size = new System.Drawing.Size(742, 374);
             this.dgvStudentList.TabIndex = 10;
+            this.dgvStudentList.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvStudentList_RowPostPaint);
+            // 
+            // StudentIdNo
+            // 
+            this.StudentIdNo.DataPropertyName = "StudentIdNo";
+            this.StudentIdNo.HeaderText = "StudentNo";
+            this.StudentIdNo.Name = "StudentIdNo";
+            this.StudentIdNo.ReadOnly = true;
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "FirstName";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "LastName";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Birthday
+            // 
+            this.Birthday.DataPropertyName = "Birthday";
+            this.Birthday.HeaderText = "Birthday";
+            this.Birthday.Name = "Birthday";
+            this.Birthday.ReadOnly = true;
+            // 
+            // ClassName
+            // 
+            this.ClassName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ClassName.DataPropertyName = "ClassName";
+            this.ClassName.HeaderText = "ClassName";
+            this.ClassName.Name = "ClassName";
+            this.ClassName.ReadOnly = true;
             // 
             // FrmStudentManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1518, 1167);
+            this.ClientSize = new System.Drawing.Size(996, 717);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvStudentList);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmStudentManage";
             this.Text = "FrmStudentManage";
             this.groupBox2.ResumeLayout(false);
@@ -419,13 +414,12 @@
         private System.Windows.Forms.ToolStripMenuItem tsmidDeleteStu;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tsmiModifyStu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClassName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Birthday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentIdNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentId;
         private System.Windows.Forms.DataGridView dgvStudentList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentIdNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Birthday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClassName;
     }
 }
