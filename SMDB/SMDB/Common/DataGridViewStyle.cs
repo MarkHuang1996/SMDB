@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace Common
+namespace SMDB
 {
     /// <summary>
     /// 设置DataGridView的样式

@@ -103,6 +103,11 @@ namespace DAL
 
         }
 
+        /// <summary>
+        /// Modify Student Infomation
+        /// </summary>
+        /// <param name="objStudent"></param>
+        /// <returns></returns>
         public int EditStudentInfo(Student objStudent)
         {
             string sql = "Update Students set FirstName ='{0}',LastName='{1}',Gender='{2}',Birthday='{3}',PhoneNumber= '{4}',StudentAddress ='{5}',ClassId = {6}";
@@ -117,6 +122,23 @@ namespace DAL
             {
 
                 throw new Exception("Update Funcation Error !! detail :" +ex.Message);
+            }
+        }
+
+        public int DeleteStudent(string StudentNo)
+        {
+            string sql = "delete from Students where StudentIdNo = " + StudentNo;
+            try
+            {
+                return SQLHelper.Update(sql);
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 547)
+                    throw new Exception("This Student is uesd for othere table ,can't delete this student directly");
+                else
+                    throw new Exception("Some issues when delete this student ");
+
             }
         }
     }

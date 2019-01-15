@@ -190,6 +190,7 @@
             this.btnDel.Text = "Delete";
             this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnEidt
             // 
@@ -215,6 +216,7 @@
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtStudentId
             // 
@@ -259,8 +261,9 @@
             // tsmidDeleteStu
             // 
             this.tsmidDeleteStu.Name = "tsmidDeleteStu";
-            this.tsmidDeleteStu.Size = new System.Drawing.Size(145, 22);
-            this.tsmidDeleteStu.Text = "删除学员(&D)";
+            this.tsmidDeleteStu.Size = new System.Drawing.Size(180, 22);
+            this.tsmidDeleteStu.Text = "Delete Student";
+            this.tsmidDeleteStu.Click += new System.EventHandler(this.tsmidDeleteStu_Click);
             // 
             // contextMenuStrip1
             // 
@@ -269,13 +272,14 @@
             this.tsmiModifyStu,
             this.tsmidDeleteStu});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(146, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
             // 
             // tsmiModifyStu
             // 
             this.tsmiModifyStu.Name = "tsmiModifyStu";
-            this.tsmiModifyStu.Size = new System.Drawing.Size(145, 22);
-            this.tsmiModifyStu.Text = "修改学员(&M)";
+            this.tsmiModifyStu.Size = new System.Drawing.Size(180, 22);
+            this.tsmiModifyStu.Text = "Edit Student";
+            this.tsmiModifyStu.Click += new System.EventHandler(this.tsmiModifyStu_Click);
             // 
             // dgvStudentList
             // 

@@ -58,5 +58,26 @@ namespace SMDB
             FrmStudentManage objFrmStudentManage = new FrmStudentManage();
             this.OpenForm(objFrmStudentManage);
         }
+
+        private void attenceCheckToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.CloseForm();
+            FrmAttendance objFrmAttendance = new FrmAttendance();
+            this.OpenForm(objFrmAttendance);
+        }
+
+        private void attendanceQuaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.CloseForm();
+            FrmAttendanceQuary objFrmAttendanceQuary = new FrmAttendanceQuary();
+            this.OpenForm(objFrmAttendanceQuary);
+        }
+
+        private void tsbScoreAnalysis_Click(object sender, EventArgs e)
+        {
+            this.CloseForm();
+            FrmScoreManage objFrmScoreManage = new FrmScoreManage();
+            this.OpenForm(objFrmScoreManage);
+        }
     }
 }

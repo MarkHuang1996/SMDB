@@ -133,6 +133,55 @@ namespace SMDB
 
 
         }
+
+        private void tsmiModifyStu_Click(object sender, EventArgs e)
+        {
+            btnEidt_Click(null, null);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+       
+            if(this.dgvStudentList.RowCount  == 0)
+            {
+                MessageBox.Show("");
+                return;
+            }
+            if(this.dgvStudentList.RowCount == null)
+            {
+                MessageBox.Show("Please Select the Student  ");
+                return;
+            }
+            //
+            DialogResult result = MessageBox.Show("Ensure to delete this student ?","Delete",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+            if (result == DialogResult.Cancel) return;
+
+            string studentNo = this.dgvStudentList.CurrentRow.Cells["StudentIdNo"].Value.ToString();
+            try
+            {
+                if(objStudentService.DeleteStudent(studentNo)== 1)
+                {
+                    MessageBox.Show("Successful to delete the student");
+                    btnQuery_Click(null, null);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void tsmidDeleteStu_Click(object sender, EventArgs e)
+        {
+            btnDel_Click(null, null);
+        }
     }
 
 

@@ -88,5 +88,15 @@ namespace DAL
             }
 
         }
+
+        /// <summary>
+        /// get server's date
+        /// 
+        /// </summary>
+        /// <returns></returns>
+       public static DateTime GetServerTime()
+        {
+            return Convert.ToDateTime(SingleRusult("select getdate()"));
+        }
     }
 }
