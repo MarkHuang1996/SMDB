@@ -79,5 +79,12 @@ namespace SMDB
             FrmScoreManage objFrmScoreManage = new FrmScoreManage();
             this.OpenForm(objFrmScoreManage);
         }
+
+        private void tsbQuery_Click(object sender, EventArgs e)
+        {
+            this.CloseForm();
+            FrmScoreQuary frmScoreQuary = new FrmScoreQuary();
+            this.OpenForm(frmScoreQuary);
+        }
     }
 }

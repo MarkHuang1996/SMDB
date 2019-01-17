@@ -74,7 +74,7 @@
             this.txtLoginPwd.PasswordChar = '*';
             this.txtLoginPwd.Size = new System.Drawing.Size(135, 20);
             this.txtLoginPwd.TabIndex = 15;
-            this.txtLoginPwd.Text = "222222";
+            this.txtLoginPwd.Text = "777777";
             this.txtLoginPwd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLoginPwd_KeyDown);
             // 
             // txtLoginId
@@ -117,7 +117,7 @@
             this.Controls.Add(this.txtLoginId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";

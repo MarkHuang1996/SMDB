@@ -141,5 +141,11 @@ namespace DAL
 
             }
         }
+
+        public DataSet GetAllStudentBySet()
+        {
+            string sql = "select ClassId,ClassName from StudentClass";
+            return SQLHelper.GetDataSet(sql);
+        }
     }
 }

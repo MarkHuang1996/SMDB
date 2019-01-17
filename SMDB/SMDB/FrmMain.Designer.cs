@@ -45,6 +45,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.attenceCheckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.attendanceQuaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quickSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryAndAnalysisQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scoureYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +58,6 @@
             this.systemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.attendanceQuaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -127,6 +127,7 @@
             this.tsbQuery.Name = "tsbQuery";
             this.tsbQuery.Size = new System.Drawing.Size(104, 28);
             this.tsbQuery.Text = "Quick Search";
+            this.tsbQuery.Click += new System.EventHandler(this.tsbQuery_Click);
             // 
             // tsbScoreAnalysis
             // 
@@ -183,7 +184,7 @@
             // attenceCheckToolStripMenuItem
             // 
             this.attenceCheckToolStripMenuItem.Name = "attenceCheckToolStripMenuItem";
-            this.attenceCheckToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.attenceCheckToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.attenceCheckToolStripMenuItem.Text = "Attendance Check";
             this.attenceCheckToolStripMenuItem.Click += new System.EventHandler(this.attenceCheckToolStripMenuItem_Click);
             // 
@@ -195,6 +196,13 @@
             this.attendanceToolStripMenuItem.Name = "attendanceToolStripMenuItem";
             this.attendanceToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.attendanceToolStripMenuItem.Text = "Attendance(&A)";
+            // 
+            // attendanceQuaryToolStripMenuItem
+            // 
+            this.attendanceQuaryToolStripMenuItem.Name = "attendanceQuaryToolStripMenuItem";
+            this.attendanceQuaryToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.attendanceQuaryToolStripMenuItem.Text = "Attendance Quary";
+            this.attendanceQuaryToolStripMenuItem.Click += new System.EventHandler(this.attendanceQuaryToolStripMenuItem_Click);
             // 
             // quickSearchToolStripMenuItem
             // 
@@ -287,13 +295,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1332, 768);
             this.panel1.TabIndex = 15;
-            // 
-            // attendanceQuaryToolStripMenuItem
-            // 
-            this.attendanceQuaryToolStripMenuItem.Name = "attendanceQuaryToolStripMenuItem";
-            this.attendanceQuaryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.attendanceQuaryToolStripMenuItem.Text = "Attendance Quary";
-            this.attendanceQuaryToolStripMenuItem.Click += new System.EventHandler(this.attendanceQuaryToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
